@@ -9,4 +9,4 @@ jobs:
 
     steps:
       - name: Print vars
-        run: echo "Project: ${{ vars.PROJECT_NAME }}"
+        run: echo "Project: ${{ vars.Dept }}"
