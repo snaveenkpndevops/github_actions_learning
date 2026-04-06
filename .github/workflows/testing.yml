@@ -1,4 +1,4 @@
-name: testing variables
+name: test config var
 
 on:
   workflow_dispatch:
@@ -7,6 +7,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Print vars
-        run: echo "Project: ${{ vars.Dept }}"
+  env:
+    PROJECT: ${{ vars.PROJECT_NAME }}
+
+  steps:
+    - name: Print vars
+      run: echo "Project: $PROJECT"
