@@ -1,0 +1,15 @@
+name: runtime variable demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set runtime variable
+        run: echo "APP_ENV=production" >> $GITHUB_ENV
+
+      - name: Use runtime variable
+        run: echo "App Environment: $APP_ENV"
