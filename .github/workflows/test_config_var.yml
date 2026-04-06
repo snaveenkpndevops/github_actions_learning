@@ -2,6 +2,12 @@ name: test config var
 
 on:
   workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        options:
+          - dev
+          - prod
 
 jobs:
   test:
