@@ -1,15 +1,15 @@
-name: test config var
+name: Configuration_variable
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:  # This line makes the workflow run only when triggered manually
+
+env:
+  name: naveen
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
 
-  env:
-    PROJECT: ${{ vars.PROJECT_NAME }}
-
-  steps:
-    - name: Print vars
-      run: echo "Project: $PROJECT"
+    steps:
+      - name: Hello World
+        run: echo "${{ env.name }} from ${{ vars.Department }} department"
