@@ -1,0 +1,20 @@
+name: dev_automatic_trigger_on_push
+
+on:
+  push:
+    branches:
+      - dev
+
+env:
+  APP_NAME: my-demo-app
+  REGION: india
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print env variables
+        run: |
+          echo "App: $APP_NAME"
+          echo "Region: $REGION"
