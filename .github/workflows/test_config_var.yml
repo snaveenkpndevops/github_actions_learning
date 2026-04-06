@@ -7,8 +7,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    env:
+      PROJECT: ${{ vars.PROJECT_NAME }}
+
     steps:
       - name: Print vars
-        run: echo "Project: ${{ vars.PROJECT_NAME }}"
-
-
+        run: echo "Project: $PROJECT"
