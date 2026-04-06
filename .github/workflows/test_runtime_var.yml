@@ -9,7 +9,9 @@ jobs:
 
     steps:
       - name: Set runtime variable
-        run: echo "APP_ENV=production" >> $GITHUB_ENV
+        run: |
+          echo "APP_ENV=production" >> $GITHUB_ENV
 
       - name: Use runtime variable
-        run: echo "App Environment: $APP_ENV"
+        run: |
+          echo "App Environment: $APP_ENV"
