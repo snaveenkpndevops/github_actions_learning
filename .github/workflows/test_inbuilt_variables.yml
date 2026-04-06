@@ -1,0 +1,14 @@
+name: test_inbuilt_variables
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print env variables
+        run: |
+          echo "My repo is: ${{ github.repository }}"
+          echo "My branch is: ${{ github.ref }}"
